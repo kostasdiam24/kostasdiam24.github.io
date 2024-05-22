@@ -3,34 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My portfolio website</title>
+    <title>My Portfolio Website</title>
     <link rel="stylesheet" href="resources/css/index.css" />
     <link rel="icon" href="resources/images/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <img
-          class="imgOfNavBar"
-          src="resources/images/some logo shit inline with portfolio text.png"
-          alt="website logo"
-        />
-        <ul class="navs">
-          <li><a class="liNav" href="#home">Home</a></li>
-          <li><a class="liNav" href="#about">About</a></li>
-          <li><a class="liNav" href="#projects">Projects</a></li>
-          <li><a class="liNav" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav id="navbar">
+      <img
+        id="navbarImage"
+        class="imgOfNavBar"
+        src="resources/images/some logo shit inline with portfolio text.png"
+        alt="website logo"
+      />
+      <ul class="navs">
+        <li><a class="liNav" href="#home">Home</a></li>
+        <li><a class="liNav" href="#about">About</a></li>
+        <li><a class="liNav" href="#projects">Projects</a></li>
+        <li><a class="liNav" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <p style="margin-left: 10px">
-      This website is under construction. If you have any questions contact me
+      This website is under construction. If you have any questions, contact me
       at kostasdiam2021@gmail.com
     </p>
     <main>
       <div style="height: 1600px"></div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h4>Contact Me</h4>
+          <p>
+            Email:
+            <a href="mailto:kostasdiam2021@gmail.com"
+              >kostasdiam2021@gmail.com</a
+            >
+          </p>
+          <p>Phone: <a href="tel:+306949076140">+30 6949076140</a></p>
+          <p>Location: Patra, Greece</p>
+        </div>
+        <div class="social-media">
+          <h4>Follow Me</h4>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+          <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+        </div>
+        <div class="footer-cta">
+          <h4>Let's Connect</h4>
+          <p>
+            <a href="#contact">Contact Me</a> to discuss your project or view
+            <a href="#projects">My Work</a>.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Konstantinos Diamantopoulos. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="resources/index.js"></script>
   </body>

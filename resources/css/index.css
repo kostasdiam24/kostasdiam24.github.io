@@ -1,3 +1,4 @@
+/* Common styles */
 body {
   background-color: white;
   font-family: Comic Sans MS, Comic Sans, cursive;
@@ -23,14 +24,30 @@ nav {
 
 .liNav {
   color: white;
+  text-decoration: none;
 }
 
 .navs {
   display: inline-flex;
   align-items: center;
   gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .imgOfNavBar {
   width: 300px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .imgOfNavBar {
+    display: none; /* Hide the image */
+  }
+
+  .navs {
+    justify-content: center; /* Center the nav links */
+    width: 100%; /* Make the ul take the full width */
+  }
 }
