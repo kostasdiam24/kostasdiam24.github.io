@@ -21,6 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// Function to rearrange elements based on screen width
+const rearrangeElements = () => {
+  const isMobile = window.innerWidth <= 600;
+  const text1H = document.getElementById("text1H");
+  const text2H = document.getElementById("text2H");
+
+  if (isMobile && !document.getElementById("imageInText")) {
+    const imageClone = imageH.cloneNode(true);
+    imageClone.id = "imageH";
+    text1H.insertAdjacentElement("afterend", imageClone);
+    imageH.style.display = "none";
+  } else if (!isMobile && document.getElementById("imageInText")) {
+    document.getElementById("imageInText").remove();
+    imageH.style.display = "block";
+  }
+};
+
+// Initial call to rearrange elements
+rearrangeElements();
+
+// Event listener for window resize
+window.addEventListener("resize", rearrangeElements);
 
 
 
