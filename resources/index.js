@@ -1,4 +1,23 @@
-// NAVBAR SCROLLING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NAVBAR SCROLLING
 
 let timer;
 
@@ -17,4 +36,4 @@ window.addEventListener('scroll', function() {
     console.log('Scroll stopped, resetting opacity'); // Debug: Check if timer callback is firing
     navbar.style.opacity = '1'; // 100% opacity after scrolling stops
   }, 100); // Adjust the timeout duration as needed
-});
+}); */
