@@ -89,6 +89,16 @@ main {
   opacity: 1;
 }
 
+.hidden2 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* Visible state */
+.visible2 {
+  opacity: 1;
+}
+
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   #heroSection {
