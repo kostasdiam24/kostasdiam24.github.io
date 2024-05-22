@@ -101,6 +101,10 @@ main {
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
+  main {
+    margin-top: 70px;
+  }
+  
   #heroSection {
     display: flex;
     flex-direction: column;
