@@ -2,8 +2,8 @@
 body {
   background-color: white;
   font-family: "Mulish", "roboto", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 10px;
 }
 
 nav {
@@ -49,5 +49,70 @@ nav {
   .navs {
     justify-content: center; /* Center the nav links */
     width: 100%; /* Make the ul take the full width */
+  }
+}
+
+main {
+  margin-top: 200px;
+}
+
+#heroSection {
+  display: flex;
+}
+
+#textInHeroSection {
+  margin-left: 100px;
+}
+
+#text1H {
+  width: 500px;
+}
+
+#text2H {
+  width: 700px;
+  margin-top: 80px;
+}
+
+.imgOfMe {
+  width: 400px;
+  margin-left: 200px;
+}
+
+/* Initial hidden state */
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* Visible state */
+.visible {
+  opacity: 1;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  #heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #textInHeroSection {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #text1H {
+    width: 100%;
+  }
+
+  #text2H {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .imgOfMe {
+    width: 80%;
+    margin: 20px 0;
   }
 }
