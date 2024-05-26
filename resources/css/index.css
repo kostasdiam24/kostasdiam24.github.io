@@ -1,7 +1,8 @@
 /* Common styles */
 body {
-  background-color: white;
-  font-family: "Mulish", "roboto", sans-serif;
+  background-color: black;
+  color: white;
+  font-family: "JetBrains Mono", "Mulish", "roboto", sans-serif;
   margin: 10px;
   padding: 10px;
 }
@@ -20,6 +21,7 @@ nav {
   box-sizing: border-box;
   opacity: 1;
   transition: opacity 0.6s ease; /* Smooth transition for opacity */
+  border-bottom: 1px solid white;
 }
 
 .liNav {
@@ -64,6 +66,10 @@ main {
   margin-left: 100px;
 }
 
+#h1text {
+  margin-bottom: 100px;
+}
+
 #text1H {
   width: 500px;
 }
@@ -71,6 +77,10 @@ main {
 #text2H {
   width: 700px;
   margin-top: 80px;
+}
+
+#h3textH {
+  margin-top: 100px;
 }
 
 .imgOfMe {

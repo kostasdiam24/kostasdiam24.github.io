@@ -22,19 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Function to rearrange elements based on screen width
+// Function to rearrange elements based on screen width
 const rearrangeElements = () => {
   const isMobile = window.innerWidth <= 600;
   const text1H = document.getElementById("text1H");
   const text2H = document.getElementById("text2H");
+  const imageH = document.getElementById("imageH");
 
-  if (isMobile && !document.getElementById("imageInText")) {
-    const imageClone = imageH.cloneNode(true);
-    imageClone.id = "imageH";
-    text1H.insertAdjacentElement("afterend", imageClone);
-    imageH.style.display = "none";
-  } else if (!isMobile && document.getElementById("imageInText")) {
-    document.getElementById("imageInText").remove();
-    imageH.style.display = "block";
+  if (isMobile && !imageH.classList.contains('moved')) {
+    text1H.insertAdjacentElement("afterend", imageH);
+    imageH.classList.add('moved');
+  } else if (!isMobile && imageH.classList.contains('moved')) {
+    const heroSection = document.getElementById("heroSection");
+    heroSection.appendChild(imageH);
+    imageH.classList.remove('moved');
   }
 };
 
@@ -45,10 +46,42 @@ rearrangeElements();
 window.addEventListener("resize", rearrangeElements);
 
 
+   // Variables for slow scroll
+      let scrollTimeout = null;
 
+      // Function to handle the slow scroll
+      const slowScroll = (event) => {
+        event.preventDefault();
 
+        // Clear the previous scroll timeout if any
+        if (scrollTimeout !== null) {
+          window.cancelAnimationFrame(scrollTimeout);
+        }
 
+        // Determine the scroll direction and set the scroll amount
+        const scrollAmount = 80;
+        const direction = event.deltaY > 0 ? 1 : -1;
+        const targetScrollY = window.scrollY + direction * scrollAmount;
 
+        // Animate the scroll
+        const animateScroll = () => {
+          const currentScrollY = window.scrollY;
+          const distance = targetScrollY - currentScrollY;
+          const scrollStep = distance / 20; // Adjust the division factor for slower or faster scroll
+          
+
+          window.scrollBy(0, scrollStep);
+
+          if (Math.abs(distance) > 1) {
+            scrollTimeout = window.requestAnimationFrame(animateScroll);
+          }
+        };
+
+        animateScroll();
+      };
+
+      // Add event listener for the wheel event
+      window.addEventListener("wheel", slowScroll, { passive: false });
 
 
 
