@@ -1,10 +1,83 @@
 /* Common styles */
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: "JetBrains Mono", "Mulish", "roboto", sans-serif;
   margin: 10px;
   padding: 10px;
+}
+
+:root {
+  --background-color: black;
+  --text-color: white;
+  --nav-background: hsl(0, 0%, 0%);
+  --link-hover-color: blue;
+  --h1-underline-color: blue;
+}
+
+[data-theme="light"] {
+  --background-color: white;
+  --text-color: black;
+  --nav-background: #d9d9d9;
+
+  --link-hover-color: purple;
+  --h1-underline-color: purple;
+}
+
+/* Theme switch styles */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.theme-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+
+
+
+input:checked + .slider {
+  background-color: #000000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded slider */
+.theme-switch .slider.round {
+  border-radius: 34px;
+}
+
+.theme-switch .slider.round:before {
+  border-radius: 50%;
 }
 
 nav {
@@ -15,18 +88,38 @@ nav {
   display: inline-flex;
   justify-content: space-between;
   height: 70px;
-  background-color: hsl(0, 0%, 0%);
+  background-color: var(--nav-background);
   align-items: center;
   padding: 0 10px;
   box-sizing: border-box;
   opacity: 1;
-  transition: opacity 0.6s ease; /* Smooth transition for opacity */
-  border-bottom: 1px solid white;
+  transition: opacity 0.6s ease, background-color 0.3s ease; /* Smooth transition for opacity and background color */
+  border-bottom: 1px solid var(--text-color);
 }
 
+
 .liNav {
-  color: white;
+  font-size: 1.4em;
   text-decoration: none;
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit the color from the parent */
+  position: relative; /* Needed for the pseudo-element */
+}
+
+.liNav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Adjust this to place the underline as needed */
+  height: 4px; /* Thickness of the underline */
+  width: 0; /* Initially set width to 0 */
+  background-color: blue;
+  transition: width 0.3s ease; /* Transition for smooth effect */
+  opacity: 0.9; /* Adjust the opacity as needed */
+}
+
+.liNav:hover::after {
+  width: 100%;
 }
 
 .navs {
@@ -39,11 +132,12 @@ nav {
 }
 
 .imgOfNavBar {
-  width: 300px;
+  margin-top: 10px;
+  width: 220px;
 }
 
 /* Media query for mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .imgOfNavBar {
     display: none; /* Hide the image */
   }
@@ -58,12 +152,22 @@ main {
   margin-top: 200px;
 }
 
+h1 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 558, 0.9); /* Horizontal offset, Vertical offset, Blur radius, Color */
+}
+
 #heroSection {
+  height: 100%;
+  width: auto;
+  background-image: url("resources\images\back1.png");
+  background-size: cover;
   display: flex;
 }
 
 #textInHeroSection {
   margin-left: 100px;
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
+  margin-top: -70px; /* Negative margin to offset the padding */
 }
 
 #h1text {
@@ -110,9 +214,28 @@ main {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   main {
     margin-top: 70px;
+  }
+
+  .theme-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 21px;
+    left: 3px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+
+  .liNav {
+    font-size: 1.1em; }
+
+  .imgOfMe {
+    width: 80%;
+    margin: 10px auto; /* Center the image horizontally */
   }
   
   #heroSection {
@@ -138,5 +261,22 @@ main {
   .imgOfMe {
     width: 80%;
     margin: 10px 46px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#fewWordsAboutMe {
+  margin-top: 150px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  #fewWordsAboutMeText {
+    width: 600px;
   }
 }

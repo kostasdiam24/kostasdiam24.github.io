@@ -11,20 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 700);
 });
 
-// JavaScript to add the visible class after 1.5 seconds
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(() => {
-        document.getElementById("textInHeroSection").classList.add("visible");
-        document.getElementById("imageH").classList.add("visible");
-      }, 900);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("textInHeroSection").classList.add("visible");
+    document.getElementById("imageH").classList.add("visible");
+  }, 900);
+});
 
-
-
-// Function to rearrange elements based on screen width
 // Function to rearrange elements based on screen width
 const rearrangeElements = () => {
-  const isMobile = window.innerWidth <= 600;
+  const isMobile = window.innerWidth <= 800;
   const text1H = document.getElementById("text1H");
   const text2H = document.getElementById("text2H");
   const imageH = document.getElementById("imageH");
@@ -46,46 +42,45 @@ rearrangeElements();
 window.addEventListener("resize", rearrangeElements);
 
 
-   // Variables for slow scroll
-      let scrollTimeout = null;
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("themeToggle");
 
-      // Function to handle the slow scroll
-      const slowScroll = (event) => {
-        event.preventDefault();
-
-        // Clear the previous scroll timeout if any
-        if (scrollTimeout !== null) {
-          window.cancelAnimationFrame(scrollTimeout);
-        }
-
-        // Determine the scroll direction and set the scroll amount
-        const scrollAmount = 80;
-        const direction = event.deltaY > 0 ? 1 : -1;
-        const targetScrollY = window.scrollY + direction * scrollAmount;
-
-        // Animate the scroll
-        const animateScroll = () => {
-          const currentScrollY = window.scrollY;
-          const distance = targetScrollY - currentScrollY;
-          const scrollStep = distance / 20; // Adjust the division factor for slower or faster scroll
-          
-
-          window.scrollBy(0, scrollStep);
-
-          if (Math.abs(distance) > 1) {
-            scrollTimeout = window.requestAnimationFrame(animateScroll);
-          }
-        };
-
-        animateScroll();
-      };
-
-      // Add event listener for the wheel event
-      window.addEventListener("wheel", slowScroll, { passive: false });
+  themeToggle.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  });
+});
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("themeToggle");
+  const navbarImage = document.getElementById("navbarImage");
 
+  themeToggle.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      document.documentElement.setAttribute('data-theme', 'light');
+      navbarImage.src = 'resources/images/newEdit3p8.png'; // Change to light theme image
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      navbarImage.src = 'resources/images/newEdit2p8.png'; // Change to dark theme image
+    }
+  });
 
+  // Underline Animation on Scroll
+  const h1 = document.querySelector('h1');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const scrollPercentage = Math.min(scrollPosition / maxScroll, 1);
+    const underlineWidth = scrollPercentage * 100;
+
+    h1.style.setProperty('--underline-width', underlineWidth + '%');
+  });
+});
 
 
 
