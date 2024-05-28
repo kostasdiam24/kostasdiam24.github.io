@@ -26,11 +26,32 @@ body {
 
 /* Theme switch styles */
 .theme-switch {
+  margin-top: 60px;
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+  z-index: 1;
 }
+
+.divToCenterADiv {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+#ThemeDiv {
+  width: 400px; /* Adjust width as needed */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.changeThemeP {
+  margin-top: 80px;
+}
+
 
 .theme-switch input {
   opacity: 0;
