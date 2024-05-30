@@ -279,6 +279,8 @@ h1 {
     margin-top: 20px;
   }
 
+  
+
   .imgOfMe {
     width: 80%;
     margin: 10px 46px;
@@ -295,6 +297,97 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+#aboutBtn {
+  margin-top: 60px;
+  width: 100px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: darkblue;
+  border: 2px solid blue;
+  
+}
+
+#aboutLink {
+  color: white;
+  text-decoration: none;
+}
+
+:root {
+  --background-color: black;
+  --text-color: white;
+  --nav-background: hsl(0, 0%, 0%);
+  --link-hover-color: blue;
+  --h1-underline-color: blue;
+  --button-border-color: white; /* New variable for button border color */
+  --button-text-color: white; /* New variable for button text color */
+  --button-hover-text-color: #ffffff; /* Default hover text color */
+}
+
+[data-theme="light"] {
+  --background-color: white;
+  --text-color: black;
+  --nav-background: #d9d9d9;
+  --link-hover-color: purple;
+  --h1-underline-color: purple;
+  --button-border-color: black; /* Change button border color in light theme */
+  --button-text-color: black; /* Change button text color in light theme */
+  --button-hover-text-color: #ffffff; /* Change hover text color in light theme */
+}
+
+/* Button styles using CSS variables */
+.animated-button {
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--button-text-color); /* Use variable for text color */
+  box-shadow: 0 0 0 2px var(--button-border-color); /* Use variable for border color */
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: var(--button-hover-text-color); /* Use variable for hover text color */
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+
+
 
 @media (min-width: 600px) {
   #fewWordsAboutMeText {

@@ -41,32 +41,31 @@ rearrangeElements();
 // Event listener for window resize
 window.addEventListener("resize", rearrangeElements);
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("themeToggle");
-
-  themeToggle.addEventListener("change", () => {
-    if (themeToggle.checked) {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-  });
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("themeToggle");
   const navbarImage = document.getElementById("navbarImage");
+  const rootElement = document.documentElement;
+
+  const updateButtonHoverTextColor = () => {
+    if (themeToggle.checked) {
+      rootElement.style.setProperty('--button-hover-text-color', '#000000'); // Change hover text color to black in light theme
+    } else {
+      rootElement.style.setProperty('--button-hover-text-color', '#ffffff'); // Change hover text color to white in dark theme
+    }
+  };
+
+  // Initial setup
+  updateButtonHoverTextColor();
 
   themeToggle.addEventListener("change", () => {
     if (themeToggle.checked) {
-      document.documentElement.setAttribute('data-theme', 'light');
+      rootElement.setAttribute('data-theme', 'light');
       navbarImage.src = 'resources/images/newEdit3p8.png'; // Change to light theme image
     } else {
-      document.documentElement.removeAttribute('data-theme');
+      rootElement.removeAttribute('data-theme');
       navbarImage.src = 'resources/images/newEdit2p8.png'; // Change to dark theme image
     }
+    updateButtonHoverTextColor();
   });
 
   // Underline Animation on Scroll
@@ -81,8 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     h1.style.setProperty('--underline-width', underlineWidth + '%');
   });
 });
-
-
 
 
 /*NAVBAR SCROLLING
