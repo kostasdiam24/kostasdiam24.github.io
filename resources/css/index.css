@@ -2,7 +2,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "JetBrains Mono", "Mulish", "Roboto", sans-serif;
+  font-family: "JetBrains Mono", "Mulish", "roboto", sans-serif;
   margin: 10px;
   padding: 10px;
 }
@@ -19,6 +19,7 @@ body {
   --background-color: white;
   --text-color: black;
   --nav-background: #d9d9d9;
+
   --link-hover-color: purple;
   --h1-underline-color: purple;
 }
@@ -36,12 +37,12 @@ body {
 .divToCenterADiv {
   margin-top: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
 }
 
 #ThemeDiv {
-  width: 400px;
+  width: 400px; /* Adjust width as needed */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -50,6 +51,7 @@ body {
 .changeThemeP {
   margin-top: 80px;
 }
+
 
 .theme-switch input {
   opacity: 0;
@@ -78,6 +80,9 @@ body {
   background-color: white;
   transition: 0.4s;
 }
+
+
+
 
 input:checked + .slider {
   background-color: #000000;
@@ -109,27 +114,29 @@ nav {
   padding: 0 10px;
   box-sizing: border-box;
   opacity: 1;
-  transition: opacity 0.6s ease, background-color 0.3s ease;
+  transition: opacity 0.6s ease, background-color 0.3s ease; /* Smooth transition for opacity and background color */
   border-bottom: 1px solid var(--text-color);
 }
+
 
 .liNav {
   font-size: 1.4em;
   text-decoration: none;
-  color: inherit;
-  position: relative;
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit the color from the parent */
+  position: relative; /* Needed for the pseudo-element */
 }
 
 .liNav::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -4px;
-  height: 4px;
-  width: 0;
+  bottom: -4px; /* Adjust this to place the underline as needed */
+  height: 4px; /* Thickness of the underline */
+  width: 0; /* Initially set width to 0 */
   background-color: blue;
-  transition: width 0.3s ease;
-  opacity: 0.9;
+  transition: width 0.3s ease; /* Transition for smooth effect */
+  opacity: 0.9; /* Adjust the opacity as needed */
 }
 
 .liNav:hover::after {
@@ -150,40 +157,39 @@ nav {
   width: 220px;
 }
 
+/* Media query for mobile devices */
 @media (max-width: 800px) {
   .imgOfNavBar {
-    display: none;
+    display: none; /* Hide the image */
   }
 
   .navs {
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Center the nav links */
+    width: 100%; /* Make the ul take the full width */
   }
 }
+
 
 main {
   margin-top: 200px;
 }
 
 h1 {
-  text-shadow: 2px 2px 2px rgba(0, 0, 558, 0.9);
+  text-shadow: 2px 2px 2px rgba(0, 0, 558, 0.9); /* Horizontal offset, Vertical offset, Blur radius, Color */
 }
 
 #heroSection {
   height: 100%;
   width: auto;
-  background-image: url("resources/images/back1.png");
+  background-image: url("resources\images\back1.png");
   background-size: cover;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  flex-direction: column; /* Stack items vertically */
 }
 
 #textInHeroSection {
-  margin-left: 0; /* Remove margin-left for mobile */
-  padding-top: 70px;
-  text-align: center; /* Center text */
+  margin-left: 100px;
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
+  margin-top: -70px; /* Negative margin to offset the padding */
 }
 
 #h1text {
@@ -191,12 +197,12 @@ h1 {
 }
 
 #text1H {
-  width: 100%; /* Set width to 100% for mobile */
+  width: 500px;
 }
 
 #text2H {
-  width: 100%; /* Set width to 100% for mobile */
-  margin-top: 20px;
+  width: 700px;
+  margin-top: 80px;
 }
 
 #h3textH {
@@ -204,14 +210,14 @@ h1 {
 }
 
 .imgOfMe {
-  width: 80%;
-  margin: 10px 0; /* Center the image horizontally */
+  width: 400px;
+  margin-left: 200px;
 }
 
 /* Initial hidden state */
 .hidden {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
 }
 
 /* Visible state */
@@ -221,7 +227,7 @@ h1 {
 
 .hidden2 {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
 }
 
 /* Visible state */
@@ -229,6 +235,7 @@ h1 {
   opacity: 1;
 }
 
+/* Media query for mobile devices */
 @media (max-width: 800px) {
   main {
     margin-top: 70px;
@@ -246,18 +253,17 @@ h1 {
   }
 
   .liNav {
-    font-size: 1.1em;
-  }
+    font-size: 1.1em; }
 
   .imgOfMe {
     width: 80%;
-    margin: 10px auto;
+    margin: 10px auto; /* Center the image horizontally */
   }
-
+  
   #heroSection {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 
   #textInHeroSection {
@@ -274,9 +280,11 @@ h1 {
     margin-top: 20px;
   }
 
+  
+
   .imgOfMe {
     width: 80%;
-    margin: 10px 0;
+    margin: 10px 46px;
   }
 }
 
@@ -298,6 +306,7 @@ html {
   border-radius: 50px;
   background-color: darkblue;
   border: 2px solid blue;
+  
 }
 
 #aboutLink {
@@ -363,43 +372,10 @@ html {
   transform: scale(0.95);
 }
 
+
+
 @media (min-width: 600px) {
   #fewWordsAboutMeText {
     width: 600px;
   }
-}
-
-#boxOfLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.social-media {
-  display: inline-block;
-  margin: 10px;
-}
-
-.social-media img {
-  width: 40px;
-  height: 40px;
-}
-
-#footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-#footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-#footer a:hover {
-  text-decoration: underline;
 }
