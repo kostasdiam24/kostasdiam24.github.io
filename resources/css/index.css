@@ -280,11 +280,10 @@ h1 {
     margin-top: 20px;
   }
 
-  
-
   .imgOfMe {
     width: 80%;
-    margin: 10px 46px;
+    margin: auto;
+  /* margin: 10px 30px*/
   }
 }
 
