@@ -323,3 +323,9 @@ ul.example-2 li {
         text-align: center;
     }
 }
+
+#confirmation-message {
+    display: none;
+    color: green; /* or any color you prefer */
+    font-weight: bold;
+}
