@@ -70,7 +70,7 @@ h1 {
 
 .form-container {
     max-width: 700px;
-    margin: 30px auto;
+    margin: 30px 15px;
     background-color: #001925;
     padding: 30px;
     border-left: 5px solid blue;
