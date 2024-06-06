@@ -76,6 +76,14 @@ h1 {
     border-left: 5px solid blue;
 }
 
+@media (max-width: 600px) {
+    .form-container {
+        border-left: 5px solid blue;
+        padding: 20px;
+    }
+}
+
+
 .heading {
     display: block;
     color: white;
