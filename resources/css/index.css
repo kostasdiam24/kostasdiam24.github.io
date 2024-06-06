@@ -393,8 +393,15 @@ h4 {
   color: black;
 }
 
+/*PPPPPRRRRRROOOOOOOOJJJJEEECCCCCCTSSSSSSSSS*/
+
+
 #someOfMyProjects {
   margin-top: 100px;
+}
+
+.linkToPage {
+  text-align: right;
 }
 
 .projects-grid {
@@ -403,12 +410,19 @@ h4 {
   gap: 20px;
 }
 
+
+
 .project-card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  background-color: #000085;
+  cursor:crosshair;
 }
 
 .linkToPage {
@@ -426,8 +440,16 @@ h4 {
   font-size: 1.5em;
 }
 
+.project-card h4:hover {
+  color: white;
+}
+
 .project-card p {
   color: #666;
+}
+
+.project-card p:hover {
+  color: white;
 }
 
 @media (max-width: 600px) {
