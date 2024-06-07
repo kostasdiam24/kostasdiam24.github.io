@@ -82,6 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+// --------------LETTER ANIMATION
+
+
+
+
+
+
 /*NAVBAR SCROLLING
 
 let timer;
