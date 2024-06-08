@@ -85,6 +85,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+//navbar
+document.addEventListener("DOMContentLoaded", function() {
+  const navbarToggle = document.getElementById("navbarToggle");
+  const verticalNavbar = document.getElementById("verticalNavbar");
+
+  navbarToggle.addEventListener("mouseover", function() {
+    verticalNavbar.style.display = "block";
+  });
+
+  navbarToggle.addEventListener("mouseout", function() {
+    verticalNavbar.style.display = "none";
+  });
+});
+
+
+
+
+
+
+
+
+
+
 // --------------LETTER ANIMATION
 
 

@@ -34,77 +34,82 @@ main {
   --h1-underline-color: purple;
 }
 
-/* Theme switch styles */
-.theme-switch {
-  margin-top: 60px;
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  z-index: 1;
-}
-
-.divToCenterADiv {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
-}
-
-#ThemeDiv {
-  width: 400px; /* Adjust width as needed */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.changeThemeP {
-  margin-top: 80px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
+/* Default styling for the vertical navigation bar */
+.vertical-navbar {
+  position: fixed;
+  top: 50%; /* Adjust as needed */
   right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.459);
+  border: 1px solid darkblue;
+  /*box-shadow: 5px 5px 20px blue;*/
+  padding: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+  display: none; /* Initially hide on all devices */
 }
 
-.theme-switch .slider:before {
+/* Style for links in the vertical navbar */
+.vertical-navbar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px; /* Adjust spacing between links */
+}
+/* Style for the navbar toggle button */
+.navbar-toggle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  /* Add additional styling as needed */
+}
+
+/* Style for the arrow icon */
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(135deg);
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
+  top: 50%;
+  right: 10px;
+  transform-origin: center;
 }
 
-input:checked + .slider {
-  background-color: #000000;
+/* Style for the vertical navbar */
+.vertical-navbar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.459);
+  border: 1px solid darkblue;
+  padding: 20px;
+  z-index: 1000;
+  display: none; /* Initially hide the navbar */
 }
 
-input:checked + .slider:before {
-  transform: translateX(26px);
+/* Media query to hide the navbar toggle button on mobile devices */
+@media only screen and (max-width: 767px) {
+  .navbar-toggle {
+    display: none;
+  }
 }
 
-/* Rounded slider */
-.theme-switch .slider.round {
-  border-radius: 34px;
-}
 
-.theme-switch .slider.round:before {
-  border-radius: 50%;
+
+/* Media query to display the vertical navbar on non-mobile devices */
+@media only screen and (min-width: 768px) {
+  .vertical-navbar {
+      display: flex; /* Show on non-mobile devices */
+      flex-direction: column;
+      justify-content: center;
+  }
 }
 
 nav {
@@ -264,7 +269,11 @@ ul.example-2 {
 
 ul.example-2 li {
   list-style: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .example-2 .icon-content {
   margin: 0 10px;
@@ -438,6 +447,7 @@ html {
 }
 
 #fewWordsAboutMe {
+  padding-top: 100px;
   margin-top: 150px;
   align-items: center;
   display: flex;
@@ -539,6 +549,10 @@ html {
 
 #someOfMyProjects h3 {
   font-size: 2em
+}
+
+#someOfMyProjects {
+  padding-top: 100px;
 }
 
 
@@ -675,9 +689,45 @@ h4 {
   align-items: center;
 }
 
+
+h6 {
+  font-size: 1.6em;
+  text-align: center;
+}
+
 h5 {
   font-size: 2em;
 }
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.linkItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border: 4px solid gray;
+}
+
+@media only screen and (max-width: 700px)  {
+  .linksContainer {
+    flex-direction: column;
+  }
+
+  .linkItem {
+    border: 2px solid blue;
+  }
+}
+
+
+
 
 .btnForContact {
   background: transparent;
