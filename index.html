@@ -44,10 +44,25 @@
         </ul>
       </nav>
       <div id="verticalNavbar" class="vertical-navbar">
-        <a class="navItems" href="#textInHeroSection"><svg style="width: 40px;"   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></a>
-        <a class="navItems" href="#fewWordsAboutMe"><svg style="width: 40px;"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></a>
-        <a class="navItems" href="#someOfMyProjects"><svg style="width: 40px;"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg></a>
-        <a class="navItems" href="#ContactMe"><svg style="width: 40px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></a>
+        <a class="navItems" href="#textInHeroSection">
+          <i class="fa-solid fa-house fa-xl defaultIcon" style="color: #0000ff;"></i>
+          <i id="hoverIcon" class="fa-solid fa-house fa-2xl" style="color: #0000ff;"></i>
+        </a>
+
+        <a class="navItems" href="#fewWordsAboutMe">
+          <i class="fa-solid fa-user fa-xl defaultIcon" style="color: #0000ff;"></i>
+          <i id="hoverIcon" class="fa-solid fa-user fa-2xl" style="color: #0000ff;"></i>
+        </a>
+
+        <a class="navItems" href="#someOfMyProjects">
+          <i class="fa-solid fa-diagram-project fa-xl defaultIcon" style="color: #0000ff ;"></i>
+          <i id="hoverIcon" class="fa-solid fa-diagram-project fa-2xl" style="color: #0000ff;"></i>
+        </a>
+
+        <a class="navItems" href="#ContactMe">
+          <i class="fa-solid fa-phone fa-xl defaultIcon" style="color: #0000ff;"></i>
+          <i id="hoverIcon" class="fa-solid fa-phone fa-2xl" style="color: #0000ff;"></i>
+        </a>
       </div>
     </header>
     
@@ -112,29 +127,37 @@
         </div>
       </section>
       <section id="ContactMe">
-        <h6>Connect with me on social media</h6>
+        <h6>Connect with me on <span id="socialMedia">social media</span></h6>
         <div class="linksContainer">
-          <a href="https://www.instagram.com/kwstas_.diam">
+          <a style="text-decoration: none;"  href="https://www.instagram.com/kwstas_.diam">
             <div class="linkItem" id="instagram">
               <i class="fa-brands fa-instagram fa-2xl" style="color: #0000ff;"></i>
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/konstantinos-diamantopoulos-9522322b4/">
+          <a style="text-decoration: none;"  href="https://www.linkedin.com/in/konstantinos-diamantopoulos-9522322b4/">
             <div class="linkItem" id="linkedin">
               <i class="fa-brands fa-linkedin fa-2xl" style="color: #0000ff;"></i>
             </div>
           </a>
 
-          <a href="https://github.com/kostasdiam24">
+          <a style="text-decoration: none;"  href="https://github.com/kostasdiam24">
             <div class="linkItem" id="github">
               <i class="fa-brands fa-github fa-2xl" style="color: #0000ff;"></i>
             </div>
           </a>
-          <a href="">  
-          <div class="linkItem" id="youtube"></div>
+
+          <a style="text-decoration: none;" href="https://www.youtube.com/@kwstas_.diam24">  
+            <div class="linkItem" id="youtube">
+              <i class="fa-brands fa-youtube fa-2xl" style="color: #0000ff;"></i>
+            </div>
           </a>
-          <div class="linkItem" id="twitter"></div>
+          
+          <a style="text-decoration: none;" href="">
+            <div class="linkItem" id="twitter">
+              <i class="fa-brands fa-twitter fa-2xl" style="color: #0000ff;"></i>
+            </div>
+          </a>
         </div>
         
         <h5>Need to get in touch? Reach out with just one click!</h5>
