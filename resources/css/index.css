@@ -690,6 +690,26 @@ h4 {
 }
 
 
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.skill-card {
+  padding: 10px;
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+
+.textOfSkill {
+  margin-top: 0;
+  text-align: center;
+}
+
 /*CONTACT ME DIV*/
 
 
