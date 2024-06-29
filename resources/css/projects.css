@@ -170,16 +170,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
-  .project-card {
-    background-color: black;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-  }
-  
+
   .project-card {
     width: 400px;
     background-color: black;
@@ -190,6 +181,31 @@ main {
     transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
   }
   
+  @media only screen and (max-width: 600px) {
+    .project-card {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    .linkToPage {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .linkToPage a {
+      text-align: center;
+    }
+
+    .linkToPage a:hover {
+      transform: scale(1.1);
+    }
+  }
+
   .project-card img {
     width: 100%;
     height: auto;
