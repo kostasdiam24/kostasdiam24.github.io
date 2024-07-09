@@ -101,21 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//////////MY PROJECTS///////////////
-
-
-
-
-
-
-
-
 // --------------LETTER ANIMATION
-
-
-
-
-
 
 /*NAVBAR SCROLLING
 
