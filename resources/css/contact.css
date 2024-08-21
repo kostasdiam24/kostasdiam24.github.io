@@ -20,6 +20,7 @@ header {
     left: 0;
     padding: 0 20px;
     box-sizing: border-box;
+    z-index: 999;
 }
 
 h2 {
