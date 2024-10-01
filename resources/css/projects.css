@@ -85,6 +85,11 @@ nav {
   #homepageBtn:hover {
     transform: scale(1.2);
   }
+
+  #projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 0fr));
+  }
   
   /* Media query for mobile devices */
   @media (max-width: 800px) {
