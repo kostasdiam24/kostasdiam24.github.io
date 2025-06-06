@@ -1,0 +1,287 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fff, #f0f0f0);
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 8%;
+    flex-wrap: wrap;
+  }
+  
+  .left-header {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .left-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  .left-header p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .right-header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-img {
+    max-width: 250px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,2,2,2);
+  }
+  
+
+  .see-my-work {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .see-my-work a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Hover: button background turns black, text turns white */
+  .see-my-work:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .see-my-work:hover a {
+    color: white;
+  }
+  
+
+  .about {
+    max-width: 700px;
+    margin: 10rem auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+
+  .my-work {
+    padding: 4rem 8%;
+  }
+  
+  .my-work h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 100px;
+  }
+  
+  /* Responsive columns */
+  @media (min-width: 600px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    text-align: left;
+  }
+  
+  
+  .project-card h3 {
+    margin-top: 0.5rem;
+    color: #111;
+  }
+  
+  .project-card p {
+    color: #555;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+
+  .project-card img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+
+  .contact {
+    padding: 4rem 8%;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .contact a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .for-work {
+    text-decoration: none;
+  }
+
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 2rem auto;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+
+  h4 {
+    margin-top: 60px;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .header-parent {
+      margin-top: 0;
+    }
+  
+    .right-header {
+      margin-top: 2rem; /* μετακινεί την εικόνα πιο κάτω */
+    }
+  
+    .about {
+      width: 70%;
+    }
+  
+    .see-my-work {
+      width: 80%;
+      margin: 1.5rem auto;
+      display: block;
+    }
+  }
+  
+
+  .header-section {
+    display: flex;
+    align-items: center; /* για να κεντράρει κάθετα σε desktop */
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      align-items: center; /* για να είναι πιο πάνω σε κινητό */
+      padding-top: 2rem;
+    }
+  }

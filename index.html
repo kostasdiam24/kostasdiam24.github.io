@@ -3,237 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="resources/css/index.css" />
-    <link rel="icon" href="resources/images/favicon.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Κώστας Διαμαντόπουλος - Web developer portfolio</title>
+    <link rel="stylesheet" href="index.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="resources/πφπφ.jpg" />
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <img
-          id="navbarImage"
-          class="imgOfNavBar"
-          src="resources/images/newEdit2p8.png"
-          alt="website logo"
-        />
-        <ul class="navs">
-          <li><a class="liNav" href="#textInHeroSection">Home</a></li>
-          <li><a class="liNav" href="resources/about.html">About</a></li>
-          <li>
-            <a class="liNav" href="resources/myProjects.html">Projects</a>
-          </li>
-          <li><a class="liNav" href="resources/contactMe.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div id="verticalNavbar" class="vertical-navbar">
-        <a class="navItems" href="#textInHeroSection">
-          <i class="fa-solid fa-house fa-xl defaultIcon" style="color: #0000ff;"></i>
-          <i id="hoverIcon" class="fa-solid fa-house fa-2xl" style="color: #0000ff;"></i>
-        </a>
-
-        <a class="navItems" href="#fewWordsAboutMe">
-          <i class="fa-solid fa-user fa-xl defaultIcon" style="color: #0000ff;"></i>
-          <i id="hoverIcon" class="fa-solid fa-user fa-2xl" style="color: #0000ff;"></i>
-        </a>
-
-        <a class="navItems" href="#someOfMyProjects">
-          <i class="fa-solid fa-diagram-project fa-xl defaultIcon" style="color: #0000ff ;"></i>
-          <i id="hoverIcon" class="fa-solid fa-diagram-project fa-2xl" style="color: #0000ff;"></i>
-        </a>
-
-        <a class="navItems" href="#ContactMe">
-          <i class="fa-solid fa-phone fa-xl defaultIcon" style="color: #0000ff;"></i>
-          <i id="hoverIcon" class="fa-solid fa-phone fa-2xl" style="color: #0000ff;"></i>
-        </a>
-      </div>
-    </header>
-    
-    <main>
-      <section id="heroSection">
-        <div id="textInHeroSection" class="hidden">
-          <div id="text1H">
-            <h1 id="h1text">
-              Hi, I'm Kostas Diamantopoulos, a junior web developer based in
-              Greece.
-            </h1>
-          </div>
-          <div id="text2H" class="hidden">
-            <h3 id="h3textH">
-              I craft dynamic and beautiful websites, combining coding skills
-              with creative design.
-            </h3>
-          </div>
-        </div>
-        <div id="imageH" class="hidden">
-          <img
-            class="imgOfMe"
-            src="resources/images/me black n white klokos.jpg"
-            alt="an image of me"
-          />
-        </div>
-      </section>
-      <section id="fewWordsAboutMe">
-        <h4 class="fewWordstxt">Few Words About Me:</h4>
-        <p id="fewWordsAboutMeText">
-          As a junior web developer, I have a knack for blending solid coding
-          skills with exceptional creativity. My passion lies in bringing new
-          ideas to life, crafting fully functional and interactive websites that
-          captivate and engage users, ensuring every site offers a seamless and
-          engaging user experience. Despite my junior status, I consistently
-          deliver innovative, high-quality digital experiences that reflect my
-          strong creative vision.
-        </p>
-        <button class="cssbuttons-io">
-          <span>
-            <a id="aboutLink" href="resources/about.html">SEE MORE ...</a></span
-          >
-        </button>
-      </section>
-
-      <section id="someOfMyProjects">
-        <h3 style="margin-bottom: 60px">My Projects</h3>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="image-container">
-              <img src="resources/images/simpleCalculatorImgEdit.png .png" alt="No project here yet" />
-              <div class="hover-text">Hover Over me!</div>
-            </div>
-            <h4>Simple Calculator</h4>
-            <p>This is a simple calculator project made using html, css and javascript.</p>
-            <div class="linkToPage">
-              <a style="text-decoration: none" href="resources/myProjects.html" class="project-button">Learn More</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="image-container">
-              <img src="resources/images/ytClone.png" alt="No project here yet" />
-              <div class="hover-text">Hover Over me!</div>
-            </div>
-            <h4>Youtube Clone</h4>
-            <p>This WILL be a youtube clone website, featuring all the features that youtube has with high accuracy.</p>
-            <div class="linkToPage">
-              <div class="linkToPage">
-                <a style="text-decoration: none" href="resources/myProjects.html" class="project-button">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div id="toFlexEnd">
-          <a id="moreProjectsLink" href="resources/myProjects.html">
-            <button class="moreProjects">SEE MORE</button>
-          </a>
-        </div>
-      
-        <h3>My Skills</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <i class="fa-brands fa-html5 fa-8x" style="color: #f06529;"></i>
-            <p class="textOfSkill">html</p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-brands fa-css3-alt fa-8x" style="color: #2965f1;"></i>
-            <p class="textOfSkill">css</p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-brands fa-js fa-8x" style="color: #f0db4f;"></i>
-            <p class="textOfSkill">JavaScript</p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-brands fa-git-alt fa-8x" style="color: #f1502f;"></i>
-            <p class="textOfSkill">Git workflow</p>
-          </div>
-        </div>
-      </section>      
-      <section id="ContactMe">
-        <h6>Connect with me on <span id="socialMedia">social media</span></h6>
-        <div class="linksContainer">
-          <a style="text-decoration: none;"  href="https://www.instagram.com/kwstas_.diam">
-            <div class="linkItem" id="instagram">
-              <i class="fa-brands fa-instagram fa-2xl" style="color: #0000ff;"></i>
-            </div>
-          </a>
-
-          <a style="text-decoration: none;"  href="https://www.linkedin.com/in/konstantinos-diamantopoulos-9522322b4/">
-            <div class="linkItem" id="linkedin">
-              <i class="fa-brands fa-linkedin fa-2xl" style="color: #0000ff;"></i>
-            </div>
-          </a>
-
-          <a style="text-decoration: none;"  href="https://github.com/kostasdiam24">
-            <div class="linkItem" id="github">
-              <i class="fa-brands fa-github fa-2xl" style="color: #0000ff;"></i>
-            </div>
-          </a>
-
-          <a style="text-decoration: none;" href="https://www.youtube.com/@kwstas_.diam24">  
-            <div class="linkItem" id="youtube">
-              <i class="fa-brands fa-youtube fa-2xl" style="color: #0000ff;"></i>
-            </div>
-          </a>
-          
-          <a style="text-decoration: none;" href="https://x.com/kostasdiamPatra">
-            <div class="linkItem" id="twitter">
-              <i class="fa-brands fa-twitter fa-2xl" style="color: #0000ff;"></i>
-            </div>
-          </a>
-        </div>
-        
-        <h5>Need to get in touch? Reach out with just one click!</h5>
-        <a
-          href="resources/contactMe.html"
-          style="text-decoration: none; color: cyan"
-        >
-          <button class="btnForContact">Contact me here!</button>
-        </a>
-      </div>
-      <p style="margin-left: 10px; margin-top: 80px">
-        This website is still under construction. If you have any questions,
-        contact me.
-      </p>
-    </main>
-    <!--style="margin-left: 10px" sto footer-->
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
-          <p>Location: Patra, Greece</p>
-        </div>
-        <div class="footer-cta">
-          <h4 style="color: white">Let's Connect</h4>
+    <div class="header-parent">
+      <div class="header">
+        <div class="left-header">
+          <h1>Γειά σου! Είμαι ο Κώστας Διαμαντόπουλος</h1>
           <p>
-            <a href="resources/contactMe.html"
-              ><span class="lastSpan">Contact Me</span></a
-            >
-            to discuss your project or, view
-            <a href="resources/myProjects.html"
-              ><span class="lastSpan">My Work</span></a
-            >.
+            Κατασκευάζω επαγγελματικές ιστοσελίδες για τοπικές επιχειρήσεις.
           </p>
         </div>
+        <div class="right-header">
+          <img src="resources/πφπφ.jpg" class="header-img" alt="Εικόνα μου" />
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Konstantinos Diamantopoulos. All rights reserved.</p>
+      <a class="for-work" href="#my-work">
+        <button class="see-my-work">Δες την δουλειά μου εδώ!</button></a
+      >
+    </div>
+
+    <div class="about">
+      <h2>Ποιός είμαι</h2>
+      <p class="about-p">
+        Είμαι ένας Web Developer και ειδικεύομαι στην κατασκευή απλών, εύκολων
+        προς τον χρήστη, μοντέρνων και επαγγελματικών ιστοσελιδών.
+        <br /><br />
+        Η ιστοσελίδα σου είναι η πρώτη εντύπωση που δίνεις, και το πως φένεται
+        δουλεύει σαν μια δεύτερη ταυτότητα για τους πελάτες. Μαθαίνουν πόσο
+        μοντέρνα η πόσο επαγγελματική είναι η επιχείρησή σου. Μαζί μπορούμε να
+        την κάνουμε να ξεχωρίζει.
+        <br />
+        <br />
+        Αν έχεις επιχείρηση και χρειάζεσαι παρουσία στο internet, αυτό κανω εγώ,
+        είμαι εδώ για να βοηθήσω — με χαμηλό κόστος και σοβαρή δουλειά.
+      </p>
+    </div>
+
+    <div class="my-work" id="my-work">
+      <h2>Η Δουλειά μου</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img
+            src="resources/multiple devices.png"
+            alt="Car Repair Shop Website"
+          />
+          <h3>Ιστοσελίδα για συνεργείο αυτοκινήτων</h3>
+          <p>
+            Πλήρης responsive μοντέρνα ιστοσελίδα για το κατάστημα "Mavrelis
+            Carfix". Φτιαγμένο με επεξεργασία template γραπτά.
+          </p>
+          <a href="https://mavreliscarfix.gr" target="_blank"
+            >www.mavreliscarfix.gr</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="resources/colmar academy.png" alt="colmar academy" />
+          <h3>Τεστ ιστοσελίδα για εξάσκηση - colmar academy</h3>
+          <p>
+            Πλήρης ιστοσελίδα για μια φανταστική εταιρία, την colmar academy.
+            Φτιάχτηκε με γραμμένο με το χέρι κώδικα.
+          </p>
+          <a href="" target="_blank">Δες το live</a>
+        </div>
+        <div class="project-card">
+          <img src="resources/old portfolio.png" alt="old portfolio website" />
+          <h3>Προηγούμενο portfolio website</h3>
+          <p>
+            Πλήρες portfolio website για τον εαυτό μου. Φτιάχτηκε με γραμμένο με
+            το χέρι κώδικα.
+          </p>
+          <a href="" target="_blank">Δες το live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h2>Ας επικοινωνήσουμε!</h2>
+      <p>
+        Είτε είσαι ελέυθερος επαγγελματίας είτε είσαι επιχείρηση, μπορώ να σου
+        φτιάξω την ιστοσελίδα σου σε χαμηλό κόστος.
+      </p>
+      <div class="contact-form"></div>
+      <p>
+        <a
+          class="press-here-to"
+          href="mailto: kostasdiam2021@gmail.com"
+          target="_blank"
+          >Πάτησε εδώ</a
+        >
+        για να μου στείλεις προσωπικό email.
+      </p>
+      <p>
+        <a class="press-here-to" href="tel:+30 694-907-6140">Πάτησε εδώ</a> για
+        να με πάρεις τηλέφωνο.
+      </p>
+      <p>
+        <a
+          target="_blank"
+          class="press-here-to"
+          href="https://www.instagram.com/kwstas_.diamantopoulos/#"
+          >Πάτησε εδώ</a
+        >
+        για να μου στείλεις μύνημα στο instagram.
+      </p>
+      <h4>Η στείλε μου μύνημα επιτόπου με την παρακάτω φόρμα</h4>
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/xvgrzgwq"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Όνομά σου" required />
+        <input type="email" name="email" placeholder="Το email σου" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Το μήνυμά σου..."
+          required
+        ></textarea>
+        <button type="submit">Στείλε μήνυμα</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="contacts"></div>
+      <div class="rights">
+        © Κώστας Διαμαντόπουλος 2025, all rights reserved
       </div>
     </footer>
-
-    <script src="resources/index.js"></script>
   </body>
 </html>
