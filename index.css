@@ -5,7 +5,10 @@ body {
     background: linear-gradient(to right, #fff, #f0f0f0);
     color: #333;
     line-height: 1.6;
+    cursor: url('resources/cursor\ \(2\).cur'), auto;
 }
+
+
 
 html {
   scroll-behavior: smooth;
@@ -284,4 +287,8 @@ html {
       align-items: center; /* για να είναι πιο πάνω σε κινητό */
       padding-top: 2rem;
     }
+  }
+
+  a {
+    cursor: url('resources/cursor\ \(2\).cur'), auto; 
   }
